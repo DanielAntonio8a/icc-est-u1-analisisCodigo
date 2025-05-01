@@ -23,6 +23,12 @@ class Benchmarking:
         tarea2 = lambda: self.mO.ordenamiento_seleccion(arreglo)  # Definir la tarea a medir
         tiempoN2 = self.contar_con_current_Nanotime(tarea2)  # Contar el tiempo de ejecución
         print(f"\tTiempo de ejecución: {tiempoN2} Nano segundos")
+        
+        # Llamar al método de ordenamiento shell
+        print("\nLlamando al método de ordenamiento por shell...")
+        tarea3 = lambda: self.mO.ordenamiento_shell(arreglo)  # Definir la tarea a medir
+        tiempoN3 = self.contar_con_current_Nanotime(tarea3)  # Contar el tiempo de ejecución
+        print(f"\tTiempo de ejecución: {tiempoN3} Nano segundos")
 
 
 
