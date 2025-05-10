@@ -38,6 +38,18 @@ class MetodosOrdenamiento:
             arreglo[i], arreglo[min_idx] = arreglo[min_idx], arreglo[i]
         return arreglo
     
+    def sort_Insercion(self,array):
+        arreglo=array.copy()
+        n=len(arreglo)
+        for i in range(1,n):
+            clave=arreglo[i]
+            j=i-1
+            while j>=0 and arreglo[j]>clave:
+                arreglo[j+1]=arreglo[j]
+                j-=1
+            arreglo[j+1]=clave
+        return arreglo
+    
     def ordenamiento_shell(self, arreglo):
       # Ordenamiento por método Shell
       arreglo = arreglo.copy()
